@@ -6,6 +6,7 @@ import bcccp.tickets.adhoc.IAdhocTicket;
 import bcccp.tickets.adhoc.IAdhocTicketDAO;
 import bcccp.tickets.season.ISeasonTicket;
 import bcccp.tickets.season.ISeasonTicketDAO;
+import java.util.ArrayList;
 
 public class Carpark implements ICarpark {
 	
@@ -21,7 +22,12 @@ public class Carpark implements ICarpark {
 	public Carpark(String name, int capacity, 
 			IAdhocTicketDAO adhocTicketDAO, 
 			ISeasonTicketDAO seasonTicketDAO) {
-		//TODO Implement constructor
+	this.carparkId = name;
+        this.capacity = capacity;
+        this.adhocTicketDAO = adhocTicketDAO;
+        this.seasonTicketDAO = seasonTicketDAO;
+
+        observers = new ArrayList<>();
 	}
 
 
