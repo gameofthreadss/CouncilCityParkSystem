@@ -142,7 +142,7 @@ public class Carpark implements ICarpark {
 
 	@Override
 	public void recordSeasonTicketEntry(String ticketId) {
-		// Added seasontocket Entry
+		// Added seasonticket entry method
                 seasonTicketDAO.recordTicketEntry(ticketId);
 		
 	}
@@ -151,7 +151,7 @@ public class Carpark implements ICarpark {
 
 	@Override
 	public void recordSeasonTicketExit(String ticketId) {
-		// TODO Auto-generated method stub
+		
 		
 	}
 
