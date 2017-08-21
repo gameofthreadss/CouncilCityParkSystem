@@ -151,7 +151,8 @@ public class Carpark implements ICarpark {
 
 	@Override
 	public void recordSeasonTicketExit(String ticketId) {
-		
+		//Added seasonticket exit method
+                seasonTicketDAO.recordTicketExit(ticketId);
 		
 	}
 
