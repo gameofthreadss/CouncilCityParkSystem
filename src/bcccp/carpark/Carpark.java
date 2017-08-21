@@ -43,7 +43,7 @@ public class Carpark implements ICarpark {
 
 
 	@Override
-	public void deregister(ICarparkObserver observer) {
+            public void deregister(ICarparkObserver observer) {
 		//deregisteration on carkpark 
                     observers.remove(observer);
                     numberOfCarsParked--;
@@ -142,7 +142,8 @@ public class Carpark implements ICarpark {
 
 	@Override
 	public void recordSeasonTicketEntry(String ticketId) {
-		// TODO Auto-generated method stub
+		// Added seasontocket Entry
+                seasonTicketDAO.recordTicketEntry(ticketId);
 		
 	}
 
