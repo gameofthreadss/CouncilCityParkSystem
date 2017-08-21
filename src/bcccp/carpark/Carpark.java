@@ -35,8 +35,8 @@ public class Carpark implements ICarpark {
 
 	@Override
 	public void register(ICarparkObserver observer) {
-		// TODO Auto-generated method stub
-                
+		//Added observer on each carpark registeration
+                observers.add(observer);
 		
 	}
 
@@ -52,7 +52,7 @@ public class Carpark implements ICarpark {
 
 	@Override
 	public String getName() {
-		//  returned carparkId value
+		// returned carparkId value
 		return carparkId;
 	}
 
