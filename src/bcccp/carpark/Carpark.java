@@ -123,7 +123,7 @@ public class Carpark implements ICarpark {
 
 	@Override
 	public void registerSeasonTicket(ISeasonTicket seasonTicket) {
-		
+		//registerTicket for season type
                 seasonTicketDAO.registerTicket(seasonTicket);
 		
 	}
