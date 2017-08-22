@@ -70,7 +70,7 @@ public class Carpark implements ICarpark {
 
 	@Override
 	public IAdhocTicket issueAdhocTicket() {
-		//return issued adhoc ticket
+		//return issued adhoc ticket.
 		return adhocTicketDAO.createTicket(carparkId);
 	}
 
