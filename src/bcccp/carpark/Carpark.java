@@ -114,7 +114,8 @@ public class Carpark implements ICarpark {
 
 	@Override
 	public void recordAdhocTicketExit() {
-		// TODO Auto-generated method stub
+		
+                numberOfCarsParked--;
 		
 	}
 
