@@ -140,9 +140,15 @@ public class Carpark implements ICarpark {
 
 
 	@Override
-	public boolean isSeasonTicketValid(String ticketId) {
-		// TODO Auto-generated method stub
-		return false;
+	public boolean isSeasonTicketValid(String ticketId) {// If today's date is within the startValidPeriod and endValidPeriod, the season ticket is valid
+
+        Date dateTime = new Date();
+
+        ISeasonTicket sTicket = seasonTicketDAO.findTicketById(ticketId);
+
+        return ((dateTime.getTime() >= sTicket.getStartValidPeriod()) &&
+                (dateTime.getTime() <= sTicket.getEndValidPeriod()))
+                ? true : false;
 	}
 
 
