@@ -156,6 +156,7 @@ public class Carpark implements ICarpark {
 
 	@Override
 	public boolean isSeasonTicketInUse(String ticketId) {
+              //Get ticket via method findTicketById and return the status of ticket
             ISeasonTicket sTicket = seasonTicketDAO.findTicketById(ticketId);
             return sTicket.inUse();
 	}
