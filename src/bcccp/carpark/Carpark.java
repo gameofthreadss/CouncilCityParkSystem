@@ -140,7 +140,8 @@ public class Carpark implements ICarpark {
 
 
 	@Override
-	public boolean isSeasonTicketValid(String ticketId) {// If today's date is within the startValidPeriod and endValidPeriod, the season ticket is valid
+	public boolean isSeasonTicketValid(String ticketId) {
+		// If today's date is within the startValidPeriod and endValidPeriod, the season ticket is valid
 
         Date dateTime = new Date();
 
