@@ -96,6 +96,9 @@ public class Carpark implements ICarpark {
 
 	@Override
 	public float calculateAddHocTicketCharge(long entryDateTime) {
+		// Calculation: get current Date and Time, subtract entryDateTime, multiply result by
+        // the $ charge rate and return charge. Assumption that rates are a fixed rate of $5.00 per hour.
+        // Convert time to hours by dividing by 60,000. Assumption this is short-stay tariff car park.
 
         float rates = 5.0f;
 
