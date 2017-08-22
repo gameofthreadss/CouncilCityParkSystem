@@ -123,7 +123,8 @@ public class Carpark implements ICarpark {
 
 	@Override
 	public void registerSeasonTicket(ISeasonTicket seasonTicket) {
-		// TODO Auto-generated method stub
+		
+                seasonTicketDAO.registerTicket(seasonTicket);
 		
 	}
 
