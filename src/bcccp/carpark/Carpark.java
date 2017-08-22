@@ -132,7 +132,8 @@ public class Carpark implements ICarpark {
 
 	@Override
 	public void deregisterSeasonTicket(ISeasonTicket seasonTicket) {
-		// TODO Auto-generated method stub
+           
+		seasonTicketDAO.deregisterTicket(seasonTicket);
 		
 	}
 
