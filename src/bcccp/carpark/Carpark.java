@@ -79,7 +79,7 @@ public class Carpark implements ICarpark {
 
 	@Override
 	public void recordAdhocTicketEntry() {
-		
+        //Add carpark number in car entry mode
             numberOfCarsParked++;
 		
 	}
