@@ -7,6 +7,7 @@ import bcccp.tickets.adhoc.IAdhocTicketDAO;
 import bcccp.tickets.season.ISeasonTicket;
 import bcccp.tickets.season.ISeasonTicketDAO;
 import java.util.ArrayList;
+import java.util.Date;
 
 public class Carpark implements ICarpark {
 	
@@ -95,8 +96,15 @@ public class Carpark implements ICarpark {
 
 	@Override
 	public float calculateAddHocTicketCharge(long entryDateTime) {
-		// TODO Auto-generated method stub
-		return 0;
+
+        float rates = 5.0f;
+
+        Date dateTime = new Date();
+
+        float chargeAmount = (dateTime.getTime() - entryDateTime) * rates / 60000;
+
+        return chargeAmount;
+        
 	}
 
 
