@@ -64,6 +64,7 @@ public class Carpark implements ICarpark {
 	@Override
 	public boolean isFull() {
 
+            //return true or false based on condition
 		return (numberOfCarsParked >= capacity) ? true : false ;
 	}
 
