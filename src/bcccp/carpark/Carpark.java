@@ -62,16 +62,16 @@ public class Carpark implements ICarpark {
 
 	@Override
 	public boolean isFull() {
-		// TODO Auto-generated method stub
-		return false;
+
+		return (numberOfCarsParked >= capacity) ? true : false ;
 	}
 
 
 
 	@Override
 	public IAdhocTicket issueAdhocTicket() {
-		// TODO Auto-generated method stub
-		return null;
+		//return issued adhoc ticket
+		return adhocTicketDAO.createTicket(carparkId);
 	}
 
 
