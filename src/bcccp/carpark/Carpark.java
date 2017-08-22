@@ -132,7 +132,7 @@ public class Carpark implements ICarpark {
 
 	@Override
 	public void deregisterSeasonTicket(ISeasonTicket seasonTicket) {
-           
+            //DeregisterTicket for season type
 		seasonTicketDAO.deregisterTicket(seasonTicket);
 		
 	}
