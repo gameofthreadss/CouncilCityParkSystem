@@ -156,8 +156,8 @@ public class Carpark implements ICarpark {
 
 	@Override
 	public boolean isSeasonTicketInUse(String ticketId) {
-		// TODO Auto-generated method stub
-		return false;
+            ISeasonTicket sTicket = seasonTicketDAO.findTicketById(ticketId);
+            return sTicket.inUse();
 	}
 
 
