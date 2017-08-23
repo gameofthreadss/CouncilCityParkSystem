@@ -24,8 +24,8 @@ public class AdhocTicket implements IAdhocTicket {
 
 	@Override
 	public int getTicketNo() {
-		// TODO Auto-generated method stub
-		return 0;
+		// return the Ticket Number 
+		return ticketNo;
 	}
 
 
