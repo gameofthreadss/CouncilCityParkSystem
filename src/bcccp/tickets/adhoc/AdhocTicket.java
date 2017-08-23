@@ -24,15 +24,15 @@ public class AdhocTicket implements IAdhocTicket {
 
 	@Override
 	public int getTicketNo() {
-		// return the Ticket Number 
+		// returns the Ticket Number 
 		return ticketNo;
 	}
 
 
 	@Override
 	public String getBarcode() {
-		// TODO Auto-generated method stub
-		return null;
+		// Returns the Barcode of the Adhoc ticket
+		return barcode;
 	}
 
 
