@@ -1,5 +1,6 @@
 package bcccp.tickets.adhoc;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class AdhocTicket implements IAdhocTicket {
@@ -46,7 +47,10 @@ public class AdhocTicket implements IAdhocTicket {
 	@Override
 	public void enter(long dateTime) {
 		// TODO Auto-generated method stub
-		
+		Date date=new Date(dateTime);
+                SimpleDateFormat df2 = new SimpleDateFormat("dd/MM/yyyy  HH:mm:ss");
+                String dateText = df2.format(date);
+                System.out.println(dateText);
 	}
 
 
