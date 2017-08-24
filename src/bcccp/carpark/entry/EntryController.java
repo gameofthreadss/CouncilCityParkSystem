@@ -45,7 +45,7 @@ public class EntryController
 
 	@Override
 	public void buttonPushed() {
-        
+        //Get object details of issueAdhocTicket
         IAdhocTicket adhocTicket = carpark.issueAdhocTicket();
 
         ui.printTicket(
