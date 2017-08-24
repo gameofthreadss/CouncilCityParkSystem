@@ -72,7 +72,7 @@ public class EntryController
 
     } else {
 
-      ui.discardTicket(); 
+      ui.discardTicket(); // reject invalid ticket
     }
 		
 	}
