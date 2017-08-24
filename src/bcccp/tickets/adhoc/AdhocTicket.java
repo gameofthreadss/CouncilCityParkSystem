@@ -57,6 +57,7 @@ public class AdhocTicket implements IAdhocTicket {
                 SimpleDateFormat df2 = new SimpleDateFormat("dd/MM/yyyy  HH:mm:ss");
                 String dateText = df2.format(date);
                 System.out.println(dateText);
+                this.entryDateTime = dateTime;
 	}
 
 
