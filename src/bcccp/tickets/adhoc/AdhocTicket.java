@@ -1,10 +1,9 @@
 package bcccp.tickets.adhoc;
 
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
 import java.util.Date;
-import bcccp.carpark.exit.ExitUI;
-import bcccp.carpark.paystation.PaystationUI;
+import bcccp.carpark.exit.ExitUI;   // To Access ExitUI Class
+import bcccp.carpark.paystation.PaystationUI; // To Access PaystaionUI Class
 public class AdhocTicket implements IAdhocTicket {
 	
 	private String carparkId;
@@ -16,9 +15,8 @@ public class AdhocTicket implements IAdhocTicket {
 	private String barcode;
         private IAdhocTicket iAdhocTicket;
         private IAdhocTicketDAO iAdhocTicketDAO;
-        private IAdhocTicketFactory iAdhocTicketFactory;
-        private ExitUI exitUI;
-        private PaystationUI payStationUI;
+        private ExitUI exitUI; //Access ExitUI Class
+        private PaystationUI payStationUI;// Access PaystaionUI Class
         
 
 	
@@ -83,7 +81,7 @@ public class AdhocTicket implements IAdhocTicket {
 	}
 	@Override
 	public void pay(long dateTime, float charge) {
-		// This will allow Adhoc Custo,er to print the Ticket for the parking 
+		// This will allow Adhoc CustoMer to print the Ticket for the parking 
                 //to pay at pay station office
                String LCD = "Pay Receipt";
                Date date = new Date(dateTime);
