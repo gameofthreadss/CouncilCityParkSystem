@@ -56,7 +56,8 @@ public class AdhocTicket implements IAdhocTicket {
 
 	@Override
 	public long getEntryDateTime() {
-		// TODO Auto-generated method stub                
+		// Returns the entry date and time of the car.  
+                //important and useful to calculate the charges for car park.
 		return entryDateTime;
 	}
 
