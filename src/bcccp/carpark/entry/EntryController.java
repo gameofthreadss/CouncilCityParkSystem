@@ -29,7 +29,7 @@ public class EntryController
 			ICarSensor os, 
 			ICarSensor is,
 			IEntryUI ui) {
-	
+	//Implement constructor
      this.carpark = carpark;
 
     this.entryGate = entryGate;
