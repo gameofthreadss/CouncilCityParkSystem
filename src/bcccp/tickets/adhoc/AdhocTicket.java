@@ -78,8 +78,8 @@ public class AdhocTicket implements IAdhocTicket {
 
 	@Override
 	public long getPaidDateTime() {
-		// TODO Auto-generated method stub
-                 //return entryDateTime;
+		//Implemented the incomplete Method getPaidDateTime() 
+                // to get date time of payment for adhock ticket.                
                  return getPaidDateTime();
 	}
 
