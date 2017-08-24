@@ -53,7 +53,10 @@ public class ExitController
 
 	@Override
 	public void ticketTaken() {
-		// TODO Auto-generated method stub
+	
+                
+                exitGate.raise();
+                
 		
 	}
 
