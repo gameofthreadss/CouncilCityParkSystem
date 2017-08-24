@@ -29,14 +29,32 @@ public class EntryController
 			ICarSensor os, 
 			ICarSensor is,
 			IEntryUI ui) {
-		//TODO Implement constructor
+	//Implement constructor
+     this.carpark = carpark;
+
+    this.entryGate = entryGate;
+
+    outsideSensor = os;
+
+    insideSensor = is;
+
+    this.ui = ui;
 	}
 
 
 
 	@Override
-	public void buttonPushed() {
-		// TODO Auto-generated method stub
+            public void buttonPushed() {
+        //Get object details of issueAdhocTicket
+        IAdhocTicket adhocTicket = carpark.issueAdhocTicket();
+
+        ui.printTicket(
+        carpark.getName(),
+        adhocTicket.getTicketNo(),
+        adhocTicket.getEntryDateTime(),
+        adhocTicket.getBarcode());
+ui.display("Take Ticket");
+    
 		
 	}
 
