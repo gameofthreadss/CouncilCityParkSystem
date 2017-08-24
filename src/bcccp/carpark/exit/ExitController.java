@@ -11,7 +11,7 @@ import java.util.Date;
 public class ExitController 
 		implements ICarSensorResponder,
 		           IExitController {
-	
+	static final long FIFTEEN_MINUTES = 900000; //fifteen minutes = 900000 milliseconds
 	private IGate exitGate;
 	private ICarSensor insideSensor;
 	private ICarSensor outsideSensor; 
@@ -49,8 +49,19 @@ public class ExitController
 		
 		
         exitTime = new Date().getTime();
+        adhocTicket = carpark.getAdhocTicket(ticketStr);
+        
+        if (adhocTicket != null) {
 
-    adhocTicket = carpark.getAdhocTicket(ticketStr);
+      if (exitTime < (adhocTicket.getPaidDateTime() + FIFTEEN_MINUTES)) {
+        ticketTaken();
+      }
+
+      return;
+      
+      
+      
+    }
 	}
 
 
