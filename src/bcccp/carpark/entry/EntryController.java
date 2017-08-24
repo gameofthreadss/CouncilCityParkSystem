@@ -116,7 +116,22 @@ public class EntryController
         }
       }
     }
-	}
+	
+    if (detectorId.equals(insideSensor.getId())) {
+
+      if (detected) {
+
+        if (entryGate.isRaised()) {
+
+          entryGate.lower();
+
+          notifyCarparkEvent();
+        }
+      }
+    }
+        
+        
+        }
 
 	
 	
