@@ -12,6 +12,10 @@ public class AdhocTicket implements IAdhocTicket {
 	private long exitDateTime;
 	private float charge;
 	private String barcode;
+        private IAdhocTicket iAdhocTicket;
+        private IAdhocTicketDAO iAdhocTicketDAO;
+        private IAdhocTicketFactory iAdhocTicketFactory;
+        
 
 	
 	
@@ -65,7 +69,12 @@ public class AdhocTicket implements IAdhocTicket {
 	@Override
 	public boolean isCurrent() {
 		// TODO Auto-generated method stub
-		return false;
+                iAdhocTicket = iAdhocTicketDAO.findTicketByBarcode(barcode);
+                if(this.barcode.equals(iAdhocTicket.getBarcode()))
+                    return true;
+                else
+                    return true;
+                    
 	}
 
 
