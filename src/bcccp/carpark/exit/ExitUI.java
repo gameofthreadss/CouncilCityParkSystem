@@ -23,7 +23,7 @@ public class ExitUI extends JFrame implements IExitUI {
 
 	private JPanel contentPane;
 	private JTextField displayTextField;
-	private JTextField ticketReaderTextField;
+	public JTextField ticketReaderTextField;
 	private IExitController controller;
 
 	

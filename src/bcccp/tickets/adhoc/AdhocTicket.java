@@ -2,7 +2,8 @@ package bcccp.tickets.adhoc;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
-
+import bcccp.carpark.exit.ExitUI;   // To Access ExitUI Class
+import bcccp.carpark.paystation.PaystationUI; // To Access PaystaionUI Class
 public class AdhocTicket implements IAdhocTicket {
 	
 	private String carparkId;
@@ -12,6 +13,11 @@ public class AdhocTicket implements IAdhocTicket {
 	private long exitDateTime;
 	private float charge;
 	private String barcode;
+        private IAdhocTicket iAdhocTicket;
+        private IAdhocTicketDAO iAdhocTicketDAO;
+        private ExitUI exitUI; //Access ExitUI Class
+        private PaystationUI payStationUI;// Access PaystaionUI Class
+        
 
 	
 	
@@ -56,23 +62,34 @@ public class AdhocTicket implements IAdhocTicket {
 
 	@Override
 	public long getEntryDateTime() {
-		// TODO Auto-generated method stub
-                
-		return 0;
+		// Returns the entry date and time of the car.  
+                //important and useful to calculate the charges for car park.
+		return entryDateTime;
 	}
 
 
 	@Override
 	public boolean isCurrent() {
-		// TODO Auto-generated method stub
-		return false;
+		// It will check for current entry of the car in the car park
+                // return true if it matches with the data already stored.
+                iAdhocTicket = iAdhocTicketDAO.findTicketByBarcode(barcode);
+                if(this.barcode.equals(iAdhocTicket.getBarcode()))
+                    return true;
+                else
+                    return true;
+                    
 	}
-
-
 	@Override
 	public void pay(long dateTime, float charge) {
-		// TODO Auto-generated method stub
-		
+		// This will allow Adhoc CustoMer to print the Ticket for the parking 
+                //to pay at pay station office
+               String LCD = "Pay Receipt";
+               Date date = new Date(dateTime);
+               LCD += "The time of car park is " + date.toString() + 
+                     " and Amount to be paid is $" + charge;
+               System.out.println(LCD);
+               payStationUI.ticketPrinterTextArea.setText(LCD);
+               
 	}
 
 
