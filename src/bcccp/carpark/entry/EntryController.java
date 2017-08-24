@@ -63,11 +63,12 @@ public class EntryController
 	@Override
 	public void ticketInserted(String barcode) {
 		
-                 if (carpark.isSeasonTicketValid(barcode)) {
+       //Added feature of ticketInserted
+       if (carpark.isSeasonTicketValid(barcode)) {
 
       carpark.recordSeasonTicketEntry(barcode);
 
-      ui.discardTicket(); 
+      ui.discardTicket(); // eject valid ticket
 
     } else {
 
