@@ -46,7 +46,8 @@ public class ExitController
 
 	@Override
 	public void ticketInserted(String ticketStr) {
-			
+	
+            //Added validation for adhocTicket and seasonaTickert car park exit
         exitTime = new Date().getTime();
         adhocTicket = carpark.getAdhocTicket(ticketStr);
         
