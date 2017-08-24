@@ -81,7 +81,7 @@ public class EntryController
 
 	@Override
 	public void ticketTaken() {
-		
+		//Added raise method for ticketTaken
 		 entryGate.raise();
 	}
 
