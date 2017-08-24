@@ -24,10 +24,10 @@ import javax.swing.UIManager;
 public class PaystationUI extends JFrame implements IPaystationUI {
 
 	private JPanel contentPane;
-	private JTextField displayTextField;
+	public JTextField displayTextField;
 	private JTextField barcodeTextField;
 	private IPaystationController controller;
-	private JTextArea ticketPrinterTextArea;
+	public JTextArea ticketPrinterTextArea;
 
 	
 	
