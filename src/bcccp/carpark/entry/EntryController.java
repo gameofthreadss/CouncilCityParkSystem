@@ -101,7 +101,7 @@ public class EntryController
 	@Override
 	public void carEventDetected(String detectorId, boolean detected) {
 
-            
+   //Added check for detector as outsideSensor     
    if (detectorId.equals(outsideSensor.getId())) {
 
       if (detected) {
