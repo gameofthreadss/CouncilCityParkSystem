@@ -13,7 +13,11 @@ public class PaystationController
 	private float charge;
 	
 	
-
+        /*
+        Initializing
+        Oshan.s
+        2107-8-23
+        */
 	public PaystationController(ICarpark carpark, IPaystationUI ui) {
 		this.carpark = carpark;
                 this.ui = ui; 
@@ -23,7 +27,7 @@ public class PaystationController
 
 	@Override
 	public void ticketInserted(String barcode) {
-		// TODO Auto-generated method stub
+		
 		
 	}
 
