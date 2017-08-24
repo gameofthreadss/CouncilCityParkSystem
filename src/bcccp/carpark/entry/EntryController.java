@@ -100,8 +100,22 @@ public class EntryController
 
 	@Override
 	public void carEventDetected(String detectorId, boolean detected) {
-		// TODO Auto-generated method stub
-		
+
+            
+   if (detectorId.equals(outsideSensor.getId())) {
+
+      if (detected) {
+
+        if (!carpark.isFull()) {
+
+          ui.display("Press Button");
+
+        } else {
+
+          ui.display("Full");
+        }
+      }
+    }
 	}
 
 	
