@@ -27,7 +27,18 @@ public class ExitController
 			ICarSensor is,
 			ICarSensor os, 
 			IExitUI ui) {
-		//TODO Implement constructor
+	
+            //Constructor implementaion 
+     this.carpark = carpark;
+
+    this.exitGate = exitGate;
+
+    insideSensor = is;
+
+    outsideSensor = os;
+
+    this.ui = ui;
+                
 	}
 
 
@@ -42,7 +53,10 @@ public class ExitController
 
 	@Override
 	public void ticketTaken() {
-		// TODO Auto-generated method stub
+	
+               //Added raise mthod
+                exitGate.raise();
+                
 		
 	}
 
