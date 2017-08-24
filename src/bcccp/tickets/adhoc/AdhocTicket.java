@@ -110,7 +110,8 @@ public class AdhocTicket implements IAdhocTicket {
 
 	@Override
 	public float getCharge() {
-		// TODO Auto-generated method stub
+		// Returns the Charge that have been calculated for parking.
+                
 		return charge;
 	}
 
