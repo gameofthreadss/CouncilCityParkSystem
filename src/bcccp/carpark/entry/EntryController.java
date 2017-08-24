@@ -44,7 +44,7 @@ public class EntryController
 
 
 	@Override
-	public void buttonPushed() {
+            public void buttonPushed() {
         //Get object details of issueAdhocTicket
         IAdhocTicket adhocTicket = carpark.issueAdhocTicket();
 
@@ -53,7 +53,7 @@ public class EntryController
         adhocTicket.getTicketNo(),
         adhocTicket.getEntryDateTime(),
         adhocTicket.getBarcode());
-
+ui.display("Take Ticket");
     
 		
 	}
