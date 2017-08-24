@@ -89,7 +89,10 @@ public class EntryController
 
 	@Override
 	public void notifyCarparkEvent() {
-		// TODO Auto-generated method stub
+	//Added logic for notifyCarparkEvent	
+      if (carpark.isFull()) {
+      ui.display("Car Park Full");
+    }
 		
 	}
 
@@ -97,9 +100,39 @@ public class EntryController
 
 	@Override
 	public void carEventDetected(String detectorId, boolean detected) {
-		// TODO Auto-generated method stub
-		
-	}
+
+   //Added check for detector as outsideSensor     
+   if (detectorId.equals(outsideSensor.getId())) {
+
+      if (detected) {
+
+        if (!carpark.isFull()) {
+
+          ui.display("Press Button");
+
+        } else {
+
+          ui.display("Full");
+        }
+      }
+    }
+	
+   //Added check for detector as insideSensor 
+    if (detectorId.equals(insideSensor.getId())) {
+
+      if (detected) {
+
+        if (entryGate.isRaised()) {
+
+          entryGate.lower();
+
+          notifyCarparkEvent();
+        }
+      }
+    }
+        
+        
+        }
 
 	
 	
