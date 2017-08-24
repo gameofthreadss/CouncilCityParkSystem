@@ -46,8 +46,7 @@ public class ExitController
 
 	@Override
 	public void ticketInserted(String ticketStr) {
-		
-		
+			
         exitTime = new Date().getTime();
         adhocTicket = carpark.getAdhocTicket(ticketStr);
         
@@ -58,11 +57,11 @@ public class ExitController
       }
 
       return;
-      
-      
-      
+      }
+      if (carpark.isSeasonTicketValid(ticketStr)) {
+      ticketTaken();
     }
-	}
+        }
 
 
 
