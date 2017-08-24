@@ -54,7 +54,7 @@ public class ExitController
 	@Override
 	public void ticketTaken() {
 	
-                
+               //Added raise mthod
                 exitGate.raise();
                 
 		
