@@ -46,7 +46,7 @@ public class AdhocTicket implements IAdhocTicket {
 
 	@Override
 	public void enter(long dateTime) {
-		// TODO Auto-generated method stub
+		// Recieves a long datetime format and convert it to sample date format
 		Date date=new Date(dateTime);
                 SimpleDateFormat df2 = new SimpleDateFormat("dd/MM/yyyy  HH:mm:ss");
                 String dateText = df2.format(date);
