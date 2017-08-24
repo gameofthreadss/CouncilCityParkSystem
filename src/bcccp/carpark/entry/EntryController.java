@@ -89,7 +89,10 @@ public class EntryController
 
 	@Override
 	public void notifyCarparkEvent() {
-		// TODO Auto-generated method stub
+		
+                if (carpark.isFull()) {
+      ui.display("Car Park Full");
+    }
 		
 	}
 
