@@ -81,8 +81,8 @@ public class EntryController
 
 	@Override
 	public void ticketTaken() {
-		// TODO Auto-generated method stub
 		
+		 entryGate.raise();
 	}
 
 
