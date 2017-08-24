@@ -111,7 +111,7 @@ public class AdhocTicket implements IAdhocTicket {
 	@Override
 	public float getCharge() {
 		// Returns the Charge that have been calculated for parking.
-                
+                //Car park charge,based on time charge is calculated
 		return charge;
 	}
 
