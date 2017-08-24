@@ -53,7 +53,7 @@ public class EntryController
         adhocTicket.getTicketNo(),
         adhocTicket.getEntryDateTime(),
         adhocTicket.getBarcode());
-ui.display("Take Ticket");
+        ui.display("Take Ticket");
     
 		
 	}
@@ -62,7 +62,18 @@ ui.display("Take Ticket");
 
 	@Override
 	public void ticketInserted(String barcode) {
-		// TODO Auto-generated method stub
+		
+       //Added feature of ticketInserted
+       if (carpark.isSeasonTicketValid(barcode)) {
+
+      carpark.recordSeasonTicketEntry(barcode);
+
+      ui.discardTicket(); // eject valid ticket
+
+    } else {
+
+      ui.discardTicket(); // reject invalid ticket
+    }
 		
 	}
 
@@ -70,8 +81,8 @@ ui.display("Take Ticket");
 
 	@Override
 	public void ticketTaken() {
-		// TODO Auto-generated method stub
-		
+		//Added raise method for ticketTaken
+		 entryGate.raise();
 	}
 
 
