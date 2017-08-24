@@ -1,5 +1,6 @@
 package bcccp.tickets.adhoc;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class AdhocTicket implements IAdhocTicket {
@@ -38,21 +39,25 @@ public class AdhocTicket implements IAdhocTicket {
 
 	@Override
 	public String getCarparkId() {
-		// TODO Auto-generated method stub
-		return null;
+		// Returns the carpark ID of the Adhoc adhoc ticket holder
+		return carparkId;
 	}
 
 
 	@Override
 	public void enter(long dateTime) {
-		// TODO Auto-generated method stub
-		
+		// Recieves a long datetime format and convert it to sample date format
+		Date date=new Date(dateTime);
+                SimpleDateFormat df2 = new SimpleDateFormat("dd/MM/yyyy  HH:mm:ss");
+                String dateText = df2.format(date);
+                System.out.println(dateText);
 	}
 
 
 	@Override
 	public long getEntryDateTime() {
 		// TODO Auto-generated method stub
+                
 		return 0;
 	}
 
@@ -73,8 +78,9 @@ public class AdhocTicket implements IAdhocTicket {
 
 	@Override
 	public long getPaidDateTime() {
-		// TODO Auto-generated method stub
-		return 0;
+		//Implemented the incomplete Method getPaidDateTime() 
+                // to get date time of payment for adhock ticket.                
+                 return getPaidDateTime();
 	}
 
 
