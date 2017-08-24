@@ -83,7 +83,8 @@ public class AdhocTicket implements IAdhocTicket {
 	}
 	@Override
 	public void pay(long dateTime, float charge) {
-		// TODO Auto-generated method stub
+		// This will allow Adhoc Custo,er to print the Ticket for the parking 
+                //to pay at pay station office
                String LCD = "Pay Receipt";
                Date date = new Date(dateTime);
                LCD += "The time of car park is " + date.toString() + 
