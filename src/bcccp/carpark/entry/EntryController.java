@@ -89,8 +89,8 @@ public class EntryController
 
 	@Override
 	public void notifyCarparkEvent() {
-		
-                if (carpark.isFull()) {
+	//Added logic for notifyCarparkEvent	
+      if (carpark.isFull()) {
       ui.display("Car Park Full");
     }
 		
