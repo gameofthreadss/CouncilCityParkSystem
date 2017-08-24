@@ -117,6 +117,7 @@ public class EntryController
       }
     }
 	
+   //Added check for detector as insideSensor 
     if (detectorId.equals(insideSensor.getId())) {
 
       if (detected) {
