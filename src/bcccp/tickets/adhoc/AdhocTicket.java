@@ -68,7 +68,8 @@ public class AdhocTicket implements IAdhocTicket {
 
 	@Override
 	public boolean isCurrent() {
-		// TODO Auto-generated method stub
+		// It will check for current entry of the car in the car park
+                // return true if it matches with the data already stored.
                 iAdhocTicket = iAdhocTicketDAO.findTicketByBarcode(barcode);
                 if(this.barcode.equals(iAdhocTicket.getBarcode()))
                     return true;
