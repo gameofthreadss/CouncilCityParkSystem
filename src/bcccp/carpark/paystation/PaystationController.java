@@ -11,6 +11,8 @@ public class PaystationController
 
 	private IAdhocTicket  adhocTicket = null;
 	private float charge;
+	
+	
 
 	public PaystationController(ICarpark carpark, IPaystationUI ui) {
 	 //Constructor implementation
@@ -24,7 +26,15 @@ public class PaystationController
 
 	@Override
 	public void ticketInserted(String barcode) {
-		
+            //get the AdhocTiket detail and comapre with datetime 
+		if (carpark.getAdhocTicket(barcode).getEntryDateTime() == adhocTicket.getEntryDateTime()) {
+      charge = carpark.calculateAddHocTicketCharge(adhocTicket.getEntryDateTime());
+      ui.display("AU " + charge);
+
+    }
+                else {
+      ui.display("Go to the office");
+    }
 		
 	}
 
