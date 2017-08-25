@@ -31,6 +31,9 @@ public class PaystationController
       ui.display("AU " + charge);
 
     }
+                else {
+      ui.display("Go to the office");
+    }
 		
 	}
 
