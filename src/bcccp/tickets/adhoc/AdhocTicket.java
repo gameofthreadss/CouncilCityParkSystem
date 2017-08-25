@@ -22,6 +22,7 @@ public class AdhocTicket implements IAdhocTicket {
         private PaystationUI payStationUI;// Access PaystaionUI Class
         private IPaystationController iPaystaionController;
         private IGate iGate;
+        static final long FIFTEEN_MINUTES = 900000; //fifteen minutes = 900000 milliseconds
         
 
 	
@@ -155,8 +156,24 @@ public class AdhocTicket implements IAdhocTicket {
 	@Override
 	public boolean hasExited() {
 		// TODO Auto-generated method stub
-                
-		return false;
+                if(iGate.isRaised()==false)
+                    return false;
+                else
+                {
+                    iGate.lower();
+                    if(isPaid())
+                    {
+                        if (exitDateTime < (this.getPaidDateTime() + FIFTEEN_MINUTES)) {
+                            iGate.raise();
+                            }                        
+                        else{
+                          payStationUI.displayTextField.setText("Contact to office");
+                          return false;
+                            }
+                    }
+                    return true;
+                }
+		
 	}
 
 	
