@@ -6,11 +6,12 @@ import bcccp.carpark.ICarSensorResponder;
 import bcccp.carpark.ICarpark;
 import bcccp.carpark.IGate;
 import bcccp.tickets.adhoc.IAdhocTicket;
+import java.util.Date;
 
 public class ExitController 
 		implements ICarSensorResponder,
 		           IExitController {
-	
+	static final long FIFTEEN_MINUTES = 900000; //fifteen minutes = 900000 milliseconds
 	private IGate exitGate;
 	private ICarSensor insideSensor;
 	private ICarSensor outsideSensor; 
@@ -45,9 +46,23 @@ public class ExitController
 
 	@Override
 	public void ticketInserted(String ticketStr) {
-		// TODO Auto-generated method stub
-		
-	}
+	
+           //Added validation for adhocTicket and seasonaTickert car park exit
+        exitTime = new Date().getTime();
+        adhocTicket = carpark.getAdhocTicket(ticketStr);
+        
+        if (adhocTicket != null) {
+
+      if (exitTime < (adhocTicket.getPaidDateTime() + FIFTEEN_MINUTES)) {
+        ticketTaken();
+      }
+
+      return;
+      }
+      if (carpark.isSeasonTicketValid(ticketStr)) {
+      ticketTaken();
+    }
+        }
 
 
 
@@ -64,7 +79,25 @@ public class ExitController
 
 	@Override
 	public void carEventDetected(String detectorId, boolean detected) {
-		// TODO Auto-generated method stub
+	//Added check to detect the event  
+            if (detectorId.equals(insideSensor.getId())) {
+
+      if (detected) {
+
+        ui.display("Insert Ticket");
+      }
+    }
+
+    if (detectorId.equals(outsideSensor.getId())) {
+
+      if (detected) {
+
+        if (exitGate.isRaised()) {
+
+          exitGate.lower();
+        }
+      }
+    }
 		
 	}
 
