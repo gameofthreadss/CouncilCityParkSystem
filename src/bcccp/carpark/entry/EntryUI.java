@@ -164,7 +164,7 @@ public class EntryUI extends JFrame implements IEntryUI {
 	
 	
 	
-	private void pushButton() {
+	public void pushButton() {
 		log("pushButton : calling button pushed");
 		controller.buttonPushed();	
 	}
