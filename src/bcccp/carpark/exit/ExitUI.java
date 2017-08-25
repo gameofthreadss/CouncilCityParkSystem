@@ -137,7 +137,7 @@ public class ExitUI extends JFrame implements IExitUI {
 
 	
 	
-	private void readTicket() {
+	public void readTicket() {
 		String ticketStr = ticketReaderTextField.getText();
 		controller.ticketInserted(ticketStr);	
 	}
