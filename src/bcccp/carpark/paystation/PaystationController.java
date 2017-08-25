@@ -26,6 +26,7 @@ public class PaystationController
 
 	@Override
 	public void ticketInserted(String barcode) {
+            //get the AdhocTiket detail and comapre with datetime 
 		if (carpark.getAdhocTicket(barcode).getEntryDateTime() == adhocTicket.getEntryDateTime()) {
       charge = carpark.calculateAddHocTicketCharge(adhocTicket.getEntryDateTime());
       ui.display("AU " + charge);
