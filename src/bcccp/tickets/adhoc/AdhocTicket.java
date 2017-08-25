@@ -18,7 +18,7 @@ public class AdhocTicket implements IAdhocTicket {
         private IAdhocTicketDAO iAdhocTicketDAO;
         private ExitUI exitUI; //Access ExitUI Class
         private PaystationUI payStationUI;// Access PaystaionUI Class
-        private IPaystationController paystaionController;
+        private IPaystationController iPaystaionController;
         
 
 	
@@ -92,7 +92,7 @@ public class AdhocTicket implements IAdhocTicket {
                LCD += "The time of car park is " + date.toString() + 
                      " and Amount to be paid is $" + charge;
                System.out.println(LCD);
-              
+               iPaystaionController.ticketPaid();
                payStationUI.ticketPrinterTextArea.setText(LCD);
                
 	}
