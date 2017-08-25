@@ -8,17 +8,21 @@ public class SeasonTicketDAO implements ISeasonTicketDAO {
 	private IUsageRecordFactory factory;
 
 	
-	
+	/*
+        This is the constructor method for this class
+        @author Oshan.s
+        @date 2107-08-25
+        */
 	public SeasonTicketDAO(IUsageRecordFactory factory) {
-		//TOD Implement constructor
+            this.factory = factory;
 	}
 
 
 
 	@Override
+        
 	public void registerTicket(ISeasonTicket ticket) {
-		// TODO Auto-generated method stub
-		
+		String id = ticket.getId();		
 	}
 
 

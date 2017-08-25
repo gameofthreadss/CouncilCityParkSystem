@@ -48,20 +48,42 @@ public class SeasonTicket implements ISeasonTicket {
 	}
 
 	@Override
+        /*
+        Oshan.s
+        2017-08-25
+        return end time
+        */
 	public long getEndValidPeriod() {
             return this.endValidPeriod;
 	}
 
+        /*
+        Oshan.s
+        will return a boolean value indiocating car park is currently using or not
+        */
 	@Override
 	public boolean inUse() {
-		// TODO Auto-generated method stub
-		return false;
+            boolean use = false;
+            if(currentUsage == null)
+            {
+                use = false;
+	}
+            else
+            {
+                use = true;
+            }
+            return use;
 	}
 
 	@Override
+        //not sure about this
+        //may be use to log it
 	public void recordUsage(IUsageRecord record) {
-		// TODO Auto-generated method stub
 		
+            long startTime = record.getStartTime();
+            long endTime = record.getEndTime();
+            long usage = endTime - startTime;
+            System.out.print(usage);		
 	}
 
 	@Override
