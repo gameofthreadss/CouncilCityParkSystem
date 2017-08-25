@@ -58,7 +58,7 @@ public class AdhocTicket implements IAdhocTicket {
 		return carparkId;
 	}
         public void setCarparkId(String carparkID) {
-		// Returns the carpark ID of the Adhoc adhoc ticket holder
+		// set the  carpark ID of the Adhoc adhoc ticket holder
 		this.carparkId = carparkID;
 	}
 
