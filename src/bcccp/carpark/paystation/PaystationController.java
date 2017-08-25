@@ -44,6 +44,7 @@ public class PaystationController
 	public void ticketPaid() {
 		
             adhocTicket.pay(adhocTicket.getExitDateTime(), charge);
+            carpark.recordAdhocTicketExit();
 		
 	}
 
