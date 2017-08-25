@@ -92,7 +92,10 @@ public class AdhocTicket implements IAdhocTicket {
                LCD += "The time of car park is " + date.toString() + 
                      " and Amount to be paid is $" + charge;
                System.out.println(LCD);
+               // This will allow user to pay at pay station
+               //user is notified about amount to be paid and processing steps
                iPaystaionController.ticketPaid();
+               //This will Display DateTime and Charge on ticketprinter disply
                payStationUI.ticketPrinterTextArea.setText(LCD);
                
 	}
