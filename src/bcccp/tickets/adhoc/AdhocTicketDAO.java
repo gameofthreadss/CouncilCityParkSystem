@@ -58,7 +58,7 @@ public class AdhocTicketDAO  implements IAdhocTicketDAO  {
 
 	@Override
 	public List<IAdhocTicket> getCurrentTickets() {
-		// TODO Auto-generated method stub
+		//Populate and will return list of  current tickets issued.
                 ArrayList<IAdhocTicket> listIAdhoc = new ArrayList<IAdhocTicket>();
                 iAdhocTicket.getTicketNo();
                 listIAdhoc.add(iAdhocTicket);
