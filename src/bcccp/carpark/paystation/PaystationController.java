@@ -11,8 +11,6 @@ public class PaystationController
 
 	private IAdhocTicket  adhocTicket = null;
 	private float charge;
-	
-	
 
 	public PaystationController(ICarpark carpark, IPaystationUI ui) {
 	 //Constructor implementation
@@ -26,7 +24,7 @@ public class PaystationController
 
 	@Override
 	public void ticketInserted(String barcode) {
-		// TODO Auto-generated method stub
+		
 		
 	}
 
