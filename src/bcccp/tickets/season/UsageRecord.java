@@ -17,8 +17,8 @@ public class UsageRecord implements IUsageRecord {
 
 	@Override
 	public void finalise(long endDateTime) {
-		// TODO Auto-generated method stub
-		
+            long currDt = new java.util.Date().getTime();
+            this.endDateTime = currDt;
 	}
 
 
