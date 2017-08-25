@@ -15,7 +15,7 @@ public class PaystationController
 	
 
 	public PaystationController(ICarpark carpark, IPaystationUI ui) {
-	 
+	 //Constructor implementation
                 ui.registerController(this);
                 this.carpark = carpark;
                 this.ui = ui;
