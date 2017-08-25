@@ -42,7 +42,7 @@ public class AdhocTicket implements IAdhocTicket {
 	}
         
         public void setTicketNo(int TickNo) {
-                // returns the Ticket Number 
+                // set the Ticket Number 
                 this.ticketNo= TickNo;
 	}
 
