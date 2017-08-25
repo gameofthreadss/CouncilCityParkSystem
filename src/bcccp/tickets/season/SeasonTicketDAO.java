@@ -3,6 +3,11 @@ package bcccp.tickets.season;
 import bcccp.tickets.season.ISeasonTicket;
 import bcccp.tickets.season.IUsageRecordFactory;
 
+/*
+Modified by: Oshan.s
+2017-8-25
+Class for season ticket handling
+*/
 public class SeasonTicketDAO implements ISeasonTicketDAO {
 
 	private IUsageRecordFactory factory;
@@ -20,48 +25,63 @@ public class SeasonTicketDAO implements ISeasonTicketDAO {
 
 
 	@Override
-        
+        /*
+        Method for registering ticket
+        */
 	public void registerTicket(ISeasonTicket ticket) {
-		String id = ticket.getId();		
+		          registerTicket(ticket);
 	}
 
 
-
+        /*
+        method for deregistering tickets
+        */
 	@Override
 	public void deregisterTicket(ISeasonTicket ticket) {
-		// TODO Auto-generated method stub
+		          deregisterTicket(ticket);
 		
 	}
 
 
-
+        /*
+        return number of tickets
+        an int will be return
+        */
 	@Override
 	public int getNumberOfTickets() {
-		// TODO Auto-generated method stub
-		return 0;
+            return getNumberOfTickets();
 	}
 
 
-
+        /*
+        searching a ticket with a given ID
+        */
 	@Override
 	public ISeasonTicket findTicketById(String ticketId) {
-		// TODO Auto-generated method stub
-		return null;
+            return findTicketById(ticketId);
 	}
 
 
 
 	@Override
+        /*
+        does not return anything
+        recor entry of ticket
+        use id
+        */
 	public void recordTicketEntry(String ticketId) {
-		// TODO Auto-generated method stub
+		this.recordTicketEntry(ticketId);
 		
 	}
 
 
 
 	@Override
+        /*
+        record ticket exit
+        */
 	public void recordTicketExit(String ticketId) {
-		// TODO Auto-generated method stub
+		this.recordTicketExit(ticketId);
 		
 	}
 	
