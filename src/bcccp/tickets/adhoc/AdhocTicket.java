@@ -40,21 +40,27 @@ public class AdhocTicket implements IAdhocTicket {
 		// returns the Ticket Number 
 		return ticketNo;
 	}
-
+        
+        public void setTicketNo(int TickNo) {
+                // set the Ticket Number 
+                this.ticketNo= TickNo;
+	}
 
 	@Override
 	public String getBarcode() {
 		// Returns the Barcode of the Adhoc ticket
 		return barcode;
 	}
-
-
+       
 	@Override
 	public String getCarparkId() {
 		// Returns the carpark ID of the Adhoc adhoc ticket holder
 		return carparkId;
 	}
-
+        public void setCarparkId(String carparkID) {
+		// set the  carpark ID of the Adhoc adhoc ticket holder
+		this.carparkId = carparkID;
+	}
 
 	@Override
 	public void enter(long dateTime) {
