@@ -1,11 +1,15 @@
 package bcccp.tickets.adhoc;
 
 import java.util.List;
+import bcccp.tickets.adhoc.IAdhocTicket;
+import bcccp.tickets.adhoc.AdhocTicket;
 
 public class AdhocTicketDAO  implements IAdhocTicketDAO  {
 
 	private IAdhocTicketFactory factory;
 	private int currentTicketNo;
+        private IAdhocTicket iAdhocTicket;
+        private AdhocTicket adhocTicket;
 
 	
 	
@@ -15,11 +19,10 @@ public class AdhocTicketDAO  implements IAdhocTicketDAO  {
                 this.factory = factory;
 	}
 
-
-
 	@Override
 	public IAdhocTicket createTicket(String carparkId) {
 		// TODO Auto-generated method stub
+                
 		return null;
 	}
 
