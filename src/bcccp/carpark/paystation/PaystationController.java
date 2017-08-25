@@ -42,7 +42,16 @@ public class PaystationController
 
 	@Override
 	public void ticketPaid() {
-		// TODO Auto-generated method stub
+		//Calculate the ticketPaidon Adhoc ticket
+            adhocTicket.pay(adhocTicket.getExitDateTime(), charge);
+            carpark.recordAdhocTicketExit();
+          ui.printTicket(
+        carpark.getName(),
+        adhocTicket.getTicketNo(),
+        adhocTicket.getEntryDateTime(),
+        adhocTicket.getPaidDateTime(),
+        charge,
+        adhocTicket.getBarcode());
 		
 	}
 
