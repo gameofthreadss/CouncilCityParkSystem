@@ -113,6 +113,7 @@ public class AdhocTicket implements IAdhocTicket {
 	public boolean isPaid() {
 		//This will Read the Ticket to Validate payment.
                 exitUI.readTicket();
+                //This will check for current validation of ticket if valid go for payment check
                 if(isCurrent())
                 {
                     iPaystaionController.ticketPaid();
