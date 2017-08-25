@@ -1,9 +1,11 @@
 package bcccp.tickets.adhoc;
 
+import bcccp.carpark.Gate;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import bcccp.carpark.exit.ExitUI;   // To Access ExitUI Class
 import bcccp.carpark.paystation.IPaystationController;//To access payStaion
+import bcccp.carpark.IGate;
 import bcccp.carpark.paystation.PaystationUI; // To Access PaystaionUI Class
 public class AdhocTicket implements IAdhocTicket {
 	
@@ -19,6 +21,7 @@ public class AdhocTicket implements IAdhocTicket {
         private ExitUI exitUI; //Access ExitUI Class
         private PaystationUI payStationUI;// Access PaystaionUI Class
         private IPaystationController iPaystaionController;
+        private IGate iGate;
         
 
 	
@@ -77,8 +80,10 @@ public class AdhocTicket implements IAdhocTicket {
 		// It will check for current entry of the car in the car park
                 // return true if it matches with the data already stored.
                 iAdhocTicket = iAdhocTicketDAO.findTicketByBarcode(barcode);
-                if(this.barcode.equals(iAdhocTicket.getBarcode()))
+                if(this.barcode.equals(iAdhocTicket.getBarcode())){
+                   iGate.raise();
                     return true;
+                }
                 else
                     return true;
                     
@@ -99,8 +104,6 @@ public class AdhocTicket implements IAdhocTicket {
                payStationUI.ticketPrinterTextArea.setText(LCD);
                
 	}
-
-
 	@Override
 	public long getPaidDateTime() {
 		//Implemented the incomplete Method getPaidDateTime() 
@@ -118,6 +121,7 @@ public class AdhocTicket implements IAdhocTicket {
                 {
                     //calls ticketpaid method from pay station controller
                     iPaystaionController.ticketPaid();
+                    iGate.raise();
                     //return true if it is paid
                     return true;
                 }
@@ -151,6 +155,7 @@ public class AdhocTicket implements IAdhocTicket {
 	@Override
 	public boolean hasExited() {
 		// TODO Auto-generated method stub
+                
 		return false;
 	}
 
