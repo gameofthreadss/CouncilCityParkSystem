@@ -112,7 +112,8 @@ public class AdhocTicket implements IAdhocTicket {
 	@Override
 	public boolean isPaid() {
 		// TODO Auto-generated method stub
-		return false;
+                exitUI.readTicket();
+		return true;
 	}
 
 
