@@ -79,7 +79,24 @@ public class ExitController
 
 	@Override
 	public void carEventDetected(String detectorId, boolean detected) {
-		// TODO Auto-generated method stub
+		    if (detectorId.equals(insideSensor.getId())) {
+
+      if (detected) {
+
+        ui.display("Insert Ticket");
+      }
+    }
+
+    if (detectorId.equals(outsideSensor.getId())) {
+
+      if (detected) {
+
+        if (exitGate.isRaised()) {
+
+          exitGate.lower();
+        }
+      }
+    }
 		
 	}
 
