@@ -79,7 +79,8 @@ public class ExitController
 
 	@Override
 	public void carEventDetected(String detectorId, boolean detected) {
-		    if (detectorId.equals(insideSensor.getId())) {
+	//Added check to detect the event  
+            if (detectorId.equals(insideSensor.getId())) {
 
       if (detected) {
 
