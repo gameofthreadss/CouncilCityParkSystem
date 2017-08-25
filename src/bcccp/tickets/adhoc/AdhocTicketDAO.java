@@ -24,11 +24,12 @@ public class AdhocTicketDAO  implements IAdhocTicketDAO  {
 
 	@Override
 	public IAdhocTicket createTicket(String carparkId) {
-		// TODO Auto-generated method stub
+		// if car park is full no ticket issued
                 if(carPark.isFull())
                       entryUI.display("Full");
                 else
                 {
+                    // if not full customer has to push button first and it wil create ticket.
                     entryUI.pushButton();
                     iAdhocTicket.getBarcode();
                     iAdhocTicket.getTicketNo();
