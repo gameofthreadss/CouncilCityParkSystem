@@ -111,9 +111,15 @@ public class AdhocTicket implements IAdhocTicket {
 
 	@Override
 	public boolean isPaid() {
-		// TODO Auto-generated method stub
+		//This will Read the Ticket to Validate payment.
                 exitUI.readTicket();
-		return true;
+                if(isCurrent())
+                {
+                    iPaystaionController.ticketPaid();
+                    return true;
+                }
+                else
+                    return false;
 	}
 
 
