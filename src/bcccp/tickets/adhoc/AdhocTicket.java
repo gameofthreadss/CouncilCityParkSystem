@@ -155,16 +155,19 @@ public class AdhocTicket implements IAdhocTicket {
 
 	@Override
 	public boolean hasExited() {
-		// TODO Auto-generated method stub
+		// this will first check for barrier raiseed or not
                 if(iGate.isRaised()==false)
                     return false;
                 else
                 {
+                    //if barrier is raised lower it
                     iGate.lower();
                     if(isPaid())
                     {
+                        //if time exceeds more than 15minute  after payment dont allow to go and contact office.
                         if (exitDateTime < (this.getPaidDateTime() + FIFTEEN_MINUTES)) {
                             iGate.raise();
+                            return true;
                             }                        
                         else{
                           payStationUI.displayTextField.setText("Contact to office");
@@ -175,7 +178,6 @@ public class AdhocTicket implements IAdhocTicket {
                 }
 		
 	}
-
 	
 	
 }
