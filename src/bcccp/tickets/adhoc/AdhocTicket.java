@@ -40,7 +40,11 @@ public class AdhocTicket implements IAdhocTicket {
 		// returns the Ticket Number 
 		return ticketNo;
 	}
-
+        
+        public void setTicketNo(int TickNo) {
+                // returns the Ticket Number 
+                this.ticketNo= TickNo;
+	}
 
 	@Override
 	public String getBarcode() {
