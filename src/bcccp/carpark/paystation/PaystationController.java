@@ -11,16 +11,13 @@ public class PaystationController
 
 	private IAdhocTicket  adhocTicket = null;
 	private float charge;
-	
-	
-        /*
-        Initializing
-        Oshan.s
-        2107-8-23
-        */
+
 	public PaystationController(ICarpark carpark, IPaystationUI ui) {
-		this.carpark = carpark;
-                this.ui = ui; 
+	 //Constructor implementation
+                ui.registerController(this);
+                this.carpark = carpark;
+                this.ui = ui;
+                 ui.display("Idle"); 
 	}
 
 
