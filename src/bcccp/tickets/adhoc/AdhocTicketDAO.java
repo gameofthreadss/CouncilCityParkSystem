@@ -6,6 +6,7 @@ import bcccp.tickets.adhoc.AdhocTicket;//access AdhocTicket Class data
 import bcccp.carpark.Carpark;
 import bcccp.carpark.entry.EntryUI;
 import bcccp.carpark.entry.IEntryController;
+import java.util.ArrayList;
 public class AdhocTicketDAO  implements IAdhocTicketDAO  {
 
 	private IAdhocTicketFactory factory;
@@ -58,7 +59,10 @@ public class AdhocTicketDAO  implements IAdhocTicketDAO  {
 	@Override
 	public List<IAdhocTicket> getCurrentTickets() {
 		// TODO Auto-generated method stub
-		return null;
+                ArrayList<IAdhocTicket> listIAdhoc = new ArrayList<IAdhocTicket>();
+                iAdhocTicket.getTicketNo();
+                listIAdhoc.add(iAdhocTicket);
+		return listIAdhoc;
 	}
 
 	
