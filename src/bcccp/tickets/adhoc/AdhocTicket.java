@@ -3,6 +3,7 @@ package bcccp.tickets.adhoc;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import bcccp.carpark.exit.ExitUI;   // To Access ExitUI Class
+import bcccp.carpark.paystation.IPaystationController;//To access payStaion
 import bcccp.carpark.paystation.PaystationUI; // To Access PaystaionUI Class
 public class AdhocTicket implements IAdhocTicket {
 	
@@ -17,6 +18,7 @@ public class AdhocTicket implements IAdhocTicket {
         private IAdhocTicketDAO iAdhocTicketDAO;
         private ExitUI exitUI; //Access ExitUI Class
         private PaystationUI payStationUI;// Access PaystaionUI Class
+        private IPaystationController paystaionController;
         
 
 	
@@ -90,6 +92,7 @@ public class AdhocTicket implements IAdhocTicket {
                LCD += "The time of car park is " + date.toString() + 
                      " and Amount to be paid is $" + charge;
                System.out.println(LCD);
+              
                payStationUI.ticketPrinterTextArea.setText(LCD);
                
 	}
