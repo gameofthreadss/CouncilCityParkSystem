@@ -45,6 +45,13 @@ public class PaystationController
 		
             adhocTicket.pay(adhocTicket.getExitDateTime(), charge);
             carpark.recordAdhocTicketExit();
+          ui.printTicket(
+        carpark.getName(),
+        adhocTicket.getTicketNo(),
+        adhocTicket.getEntryDateTime(),
+        adhocTicket.getPaidDateTime(),
+        charge,
+        adhocTicket.getBarcode());
 		
 	}
 
