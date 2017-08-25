@@ -14,11 +14,21 @@ public class SeasonTicket implements ISeasonTicket {
 	private long startValidPeriod;
 	private long endValidPeriod;
 	
+
+        /*
+        Oshan.s
+        completed constructor method
+        */
 	public SeasonTicket (String ticketId, 
 			             String carparkId, 
 			             long startValidPeriod,
 			             long endValidPeriod) {
-		//TDO Implement constructor
+		
+            this.ticketId = ticketId;
+            this.carparkId = carparkId;
+            this.startValidPeriod = startValidPeriod;
+            this.endValidPeriod = endValidPeriod;
+            
 	}
 
 	@Override
