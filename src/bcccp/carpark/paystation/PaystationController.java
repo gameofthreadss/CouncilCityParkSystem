@@ -59,7 +59,9 @@ public class PaystationController
 
 	@Override
 	public void ticketTaken() {
-		// TODO Auto-generated method stub
+            //Display and deregister the controller
+		ui.display("Idle");
+                ui.deregisterController();
 		
 	}
 
