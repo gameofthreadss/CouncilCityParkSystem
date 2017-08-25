@@ -143,7 +143,7 @@ public class AdhocTicket implements IAdhocTicket {
 
 	@Override
 	public long getExitDateTime() {
-		// TODO Auto-generated method stub
+		// this will return the date and time of car exit
 		return exitDateTime;
 	}
 
