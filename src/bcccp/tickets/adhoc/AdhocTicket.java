@@ -3,6 +3,7 @@ package bcccp.tickets.adhoc;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import bcccp.carpark.exit.ExitUI;   // To Access ExitUI Class
+import bcccp.carpark.paystation.IPaystationController;//To access payStaion
 import bcccp.carpark.paystation.PaystationUI; // To Access PaystaionUI Class
 public class AdhocTicket implements IAdhocTicket {
 	
@@ -17,6 +18,7 @@ public class AdhocTicket implements IAdhocTicket {
         private IAdhocTicketDAO iAdhocTicketDAO;
         private ExitUI exitUI; //Access ExitUI Class
         private PaystationUI payStationUI;// Access PaystaionUI Class
+        private IPaystationController iPaystaionController;
         
 
 	
@@ -57,6 +59,8 @@ public class AdhocTicket implements IAdhocTicket {
                 SimpleDateFormat df2 = new SimpleDateFormat("dd/MM/yyyy  HH:mm:ss");
                 String dateText = df2.format(date);
                 System.out.println(dateText);
+                //sets the car entry date and time for adhoc ticket holder.
+                this.entryDateTime = dateTime;
 	}
 
 
@@ -88,6 +92,10 @@ public class AdhocTicket implements IAdhocTicket {
                LCD += "The time of car park is " + date.toString() + 
                      " and Amount to be paid is $" + charge;
                System.out.println(LCD);
+               // This will allow user to pay at pay station
+               //user is notified about amount to be paid and processing steps
+               iPaystaionController.ticketPaid();
+               //This will Display DateTime and Charge on ticketprinter disply
                payStationUI.ticketPrinterTextArea.setText(LCD);
                
 	}
@@ -110,15 +118,16 @@ public class AdhocTicket implements IAdhocTicket {
 
 	@Override
 	public float getCharge() {
-		// TODO Auto-generated method stub
-		return 0;
+		// Returns the Charge that have been calculated for parking.
+                //Car park charge,based on time charge is calculated
+		return charge;
 	}
 
 
 	@Override
 	public void exit(long dateTime) {
-		// TODO Auto-generated method stub
-		
+		// sets the Car exit date and time. useful for the future record.
+		this.exitDateTime = dateTime;
 	}
 
 
