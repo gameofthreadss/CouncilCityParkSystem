@@ -116,7 +116,9 @@ public class AdhocTicket implements IAdhocTicket {
                 //This will check for current validation of ticket if valid go for payment check
                 if(isCurrent())
                 {
+                    //calls ticketpaid method from pay station controller
                     iPaystaionController.ticketPaid();
+                    //return true if it is paid
                     return true;
                 }
                 else
