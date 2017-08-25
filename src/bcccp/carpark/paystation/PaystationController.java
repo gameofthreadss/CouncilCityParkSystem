@@ -60,6 +60,7 @@ public class PaystationController
 	@Override
 	public void ticketTaken() {
 		ui.display("Idle");
+                ui.deregisterController();
 		
 	}
 
