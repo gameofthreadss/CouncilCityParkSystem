@@ -23,7 +23,7 @@ public class ExitUI extends JFrame implements IExitUI {
 
 	private JPanel contentPane;
 	private JTextField displayTextField;
-	private JTextField ticketReaderTextField;
+	public JTextField ticketReaderTextField;
 	private IExitController controller;
 
 	
@@ -137,7 +137,7 @@ public class ExitUI extends JFrame implements IExitUI {
 
 	
 	
-	private void readTicket() {
+	public void readTicket() {
 		String ticketStr = ticketReaderTextField.getText();
 		controller.ticketInserted(ticketStr);	
 	}
