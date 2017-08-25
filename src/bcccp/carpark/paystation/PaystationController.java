@@ -42,7 +42,7 @@ public class PaystationController
 
 	@Override
 	public void ticketPaid() {
-		
+		//Calculate the ticketPaidon Adhoc ticket
             adhocTicket.pay(adhocTicket.getExitDateTime(), charge);
             carpark.recordAdhocTicketExit();
           ui.printTicket(
