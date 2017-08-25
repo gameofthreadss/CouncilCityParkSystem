@@ -26,7 +26,11 @@ public class PaystationController
 
 	@Override
 	public void ticketInserted(String barcode) {
-		// TODO Auto-generated method stub
+		if (carpark.getAdhocTicket(barcode).getEntryDateTime() == adhocTicket.getEntryDateTime()) {
+      charge = carpark.calculateAddHocTicketCharge(adhocTicket.getEntryDateTime());
+      ui.display("AU " + charge);
+
+    }
 		
 	}
 
