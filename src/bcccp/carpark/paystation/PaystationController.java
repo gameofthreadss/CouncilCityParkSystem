@@ -19,7 +19,7 @@ public class PaystationController
                 ui.registerController(this);
                 this.carpark = carpark;
                 this.ui = ui;
-                  
+                 ui.display("Idle"); 
 	}
 
 
