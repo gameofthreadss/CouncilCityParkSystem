@@ -44,7 +44,13 @@ public class AdhocTicketDAO  implements IAdhocTicketDAO  {
 	@Override
 	public IAdhocTicket findTicketByBarcode(String barcode) {
 		// TODO Auto-generated method stub
-		return null;
+                String barCode2 =iAdhocTicket.getBarcode(); 
+                if(barCode2.equals(barcode))
+                {
+		 iAdhocTicket.getTicketNo();
+                 iAdhocTicket.getCarparkId();
+                }
+            return iAdhocTicket;
 	}
 
 
