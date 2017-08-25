@@ -42,7 +42,8 @@ public class PaystationController
 
 	@Override
 	public void ticketPaid() {
-		// TODO Auto-generated method stub
+		
+            adhocTicket.pay(adhocTicket.getExitDateTime(), charge);
 		
 	}
 
