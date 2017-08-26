@@ -21,9 +21,9 @@ public class SeasonTicketDAO implements ISeasonTicketDAO {
 
 
 	@Override
+        
 	public void registerTicket(ISeasonTicket ticket) {
-		// TODO Auto-generated method stub
-		
+		String id = ticket.getId();		
 	}
 
 
