@@ -53,7 +53,9 @@ public class SeasonTicketDAO implements ISeasonTicketDAO {
 	}
 
 
-
+        /*
+        searching a ticket with a given ID
+        */
 	@Override
 	public ISeasonTicket findTicketById(String ticketId) {
             return findTicketById(ticketId);
