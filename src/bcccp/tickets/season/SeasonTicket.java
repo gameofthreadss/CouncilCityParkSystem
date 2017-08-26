@@ -48,6 +48,11 @@ public class SeasonTicket implements ISeasonTicket {
 	}
 
 	@Override
+        /*
+        Oshan.s
+        2017-08-25
+        return end time
+        */
 	public long getEndValidPeriod() {
             return this.endValidPeriod;
 	}
