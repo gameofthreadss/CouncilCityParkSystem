@@ -33,7 +33,9 @@ public class SeasonTicketDAO implements ISeasonTicketDAO {
 	}
 
 
-
+        /*
+        method for deregistering tickets
+        */
 	@Override
 	public void deregisterTicket(ISeasonTicket ticket) {
 		          deregisterTicket(ticket);
