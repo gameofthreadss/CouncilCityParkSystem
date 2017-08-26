@@ -3,6 +3,10 @@ package bcccp.carpark.paystation;
 import bcccp.carpark.ICarpark;
 import bcccp.tickets.adhoc.IAdhocTicket;
 
+/*
+Claas for control the logic for payment
+Modificatons - Oshan.s
+*/
 public class PaystationController 
 		implements IPaystationController {
 	
