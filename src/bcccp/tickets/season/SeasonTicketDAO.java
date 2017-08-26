@@ -9,10 +9,9 @@ public class SeasonTicketDAO implements ISeasonTicketDAO {
 
 	
 	/*
-        Oshan.s
-        2017-08-25
-        Class constructor
-        Class Properties initialize here
+        This is the constructor method for this class
+        @author Oshan.s
+        @date 2107-08-25
         */
 	public SeasonTicketDAO(IUsageRecordFactory factory) {
             this.factory = factory;
