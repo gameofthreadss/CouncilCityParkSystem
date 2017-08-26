@@ -59,7 +59,7 @@ public class SeasonTicketDAO implements ISeasonTicketDAO {
 
 	@Override
 	public void recordTicketExit(String ticketId) {
-		// TODO Auto-generated method stub
+		this.recordTicketExit(ticketId);
 		
 	}
 	
