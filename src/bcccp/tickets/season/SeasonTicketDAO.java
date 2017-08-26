@@ -25,7 +25,9 @@ public class SeasonTicketDAO implements ISeasonTicketDAO {
 
 
 	@Override
-        
+        /*
+        Method for registering ticket
+        */
 	public void registerTicket(ISeasonTicket ticket) {
 		          registerTicket(ticket);
 	}
