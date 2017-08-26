@@ -43,7 +43,10 @@ public class SeasonTicketDAO implements ISeasonTicketDAO {
 	}
 
 
-
+        /*
+        return number of tickets
+        an int will be return
+        */
 	@Override
 	public int getNumberOfTickets() {
             return getNumberOfTickets();
