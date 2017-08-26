@@ -44,8 +44,7 @@ public class SeasonTicketDAO implements ISeasonTicketDAO {
 
 	@Override
 	public ISeasonTicket findTicketById(String ticketId) {
-		// TODO Auto-generated method stub
-		return null;
+            return findTicketById(ticketId);
 	}
 
 
