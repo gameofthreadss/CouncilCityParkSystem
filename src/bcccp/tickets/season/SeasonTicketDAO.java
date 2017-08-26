@@ -3,6 +3,11 @@ package bcccp.tickets.season;
 import bcccp.tickets.season.ISeasonTicket;
 import bcccp.tickets.season.IUsageRecordFactory;
 
+/*
+Modified by: Oshan.s
+2017-8-25
+Class for season ticket handling
+*/
 public class SeasonTicketDAO implements ISeasonTicketDAO {
 
 	private IUsageRecordFactory factory;
