@@ -52,6 +52,10 @@ public class SeasonTicket implements ISeasonTicket {
             return this.endValidPeriod;
 	}
 
+        /*
+        Oshan.s
+        will return a boolean value indiocating car park is currently using or not
+        */
 	@Override
 	public boolean inUse() {
             boolean use = false;
