@@ -63,6 +63,9 @@ public class SeasonTicketDAO implements ISeasonTicketDAO {
 
 
 	@Override
+        /*
+        record ticket exit
+        */
 	public void recordTicketExit(String ticketId) {
 		this.recordTicketExit(ticketId);
 		
