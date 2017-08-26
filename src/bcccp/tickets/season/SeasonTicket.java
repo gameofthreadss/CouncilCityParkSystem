@@ -79,8 +79,11 @@ public class SeasonTicket implements ISeasonTicket {
         //not sure about this
         //may be use to log it
 	public void recordUsage(IUsageRecord record) {
-		// TODO Auto-generated method stub
 		
+            long startTime = record.getStartTime();
+            long endTime = record.getEndTime();
+            long usage = endTime - startTime;
+            System.out.print(usage);		
 	}
 
 	@Override
