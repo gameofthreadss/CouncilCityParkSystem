@@ -64,6 +64,11 @@ public class SeasonTicketDAO implements ISeasonTicketDAO {
 
 
 	@Override
+        /*
+        does not return anything
+        recor entry of ticket
+        use id
+        */
 	public void recordTicketEntry(String ticketId) {
 		this.recordTicketEntry(ticketId);
 		
