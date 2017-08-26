@@ -29,7 +29,7 @@ public class SeasonTicketDAO implements ISeasonTicketDAO {
 
 	@Override
 	public void deregisterTicket(ISeasonTicket ticket) {
-		String strID = ticket.getId();
+		          deregisterTicket(ticket);
 		
 	}
 
